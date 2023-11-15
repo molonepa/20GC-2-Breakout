@@ -1,0 +1,4 @@
+extends Node
+
+signal breakable_tile_hit
+signal breakable_tile_destroyed

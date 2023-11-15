@@ -1,12 +1,9 @@
 extends Node2D
 
-signal breakable_tile_hit
-
-const SPEED : int = 100
-
-var radius = 4
+var speed : int = 100
+var radius : int= 4
 var direction : Vector2
-var rng = RandomNumberGenerator.new()
+var rng : RandomNumberGenerator = RandomNumberGenerator.new()
 
 @onready var ray_cast = $RayCast2D
 
@@ -16,8 +13,10 @@ func _ready():
 
 	ray_cast.set_collision_mask(Collision.wall_collision_layer | Collision.paddle_collision_layer | Collision.breakable_collision_layer)
 
+	SignalBus.connect("breakable_tile_destroyed", _increase_speed)
+
 func _physics_process(delta):
-	self.global_position += delta * direction * SPEED
+	global_position += delta * direction * speed
 
 	if ray_cast.is_colliding():
 		var normal = ray_cast.get_collision_normal()
@@ -26,4 +25,7 @@ func _physics_process(delta):
 
 		var collider = ray_cast.get_collider()
 		if collider.collision_layer == Collision.breakable_collision_layer:
-			emit_signal("breakable_tile_hit", collider)
+			SignalBus.breakable_tile_hit.emit(collider)
+
+func _increase_speed():
+	speed *= 1.01
