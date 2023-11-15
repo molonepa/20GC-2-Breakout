@@ -7,6 +7,9 @@ var start_height : int
 func _ready():
 	start_height = global_position.y
 
+	self.set_collision_layer(Collision.paddle_collision_layer)
+	self.set_collision_mask(Collision.wall_collision_layer)
+
 func _physics_process(delta):
 	global_position.y = start_height
 
