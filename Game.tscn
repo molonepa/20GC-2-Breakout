@@ -1,19 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpt2y7ctdjc8l"]
+[gd_scene load_steps=7 format=3 uid="uid://dpt2y7ctdjc8l"]
 
 [ext_resource type="Texture2D" uid="uid://3cghebfntg1u" path="res://wall_tile.png" id="1_562nq"]
+[ext_resource type="PackedScene" uid="uid://dswgiqd6svvkt" path="res://Ball.tscn" id="2_agi2q"]
 [ext_resource type="PackedScene" uid="uid://mxhtatrmk550" path="res://Paddle.tscn" id="2_hhfan"]
+[ext_resource type="Script" path="res://WallTileMap.gd" id="2_ymekx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4pgym"]
 resource_name = "wall"
 texture = ExtResource("1_562nq")
 0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_d5k2r"]
-physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 6
 sources/0 = SubResource("TileSetAtlasSource_4pgym")
 
 [node name="Game" type="Node2D"]
@@ -22,6 +19,10 @@ sources/0 = SubResource("TileSetAtlasSource_4pgym")
 tile_set = SubResource("TileSet_d5k2r")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, 393216, 0, 0, 458752, 0, 0, 524288, 0, 0, 983048, 0, 0, 983047, 0, 0, 983046, 0, 0, 917512, 0, 0, 851976, 0, 0, 786440, 0, 0, 720904, 0, 0, 655368, 0, 0, 983045, 0, 0, 983044, 0, 0, 983043, 0, 0, 983042, 0, 0, 983040, 0, 0, 983041, 0, 0, 589824, 0, 0, 655360, 0, 0, 720896, 0, 0, 786432, 0, 0, 851968, 0, 0, 917504, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 65544, 0, 0, 131080, 0, 0, 196616, 0, 0, 262152, 0, 0, 327688, 0, 0, 393224, 0, 0, 458760, 0, 0, 524296, 0, 0, 589832, 0, 0)
+script = ExtResource("2_ymekx")
 
 [node name="Paddle" parent="." instance=ExtResource("2_hhfan")]
 position = Vector2(72, 228)
+
+[node name="Ball" parent="." instance=ExtResource("2_agi2q")]
+position = Vector2(71, 125)
