@@ -2,3 +2,5 @@ extends Node
 
 signal breakable_tile_hit
 signal breakable_tile_destroyed
+signal ball_missed
+signal reset_level
