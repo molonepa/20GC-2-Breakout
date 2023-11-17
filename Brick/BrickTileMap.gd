@@ -1,6 +1,6 @@
 extends TileMap
 
-var wall_tile = preload("res://BreakableTile.tscn")
+var wall_tile = preload("res://Brick/Brick.tscn")
 
 func _ready():
 	hide()

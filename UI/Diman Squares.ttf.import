@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ct5v015jg3pky"
-path="res://.godot/imported/Diman Squares.ttf-4422bb9a01f9fa4305d11eccb125f366.fontdata"
+path="res://.godot/imported/Diman Squares.ttf-222df3db3098cb62c91f1a65124f7dd0.fontdata"
 
 [deps]
 
-source_file="res://Diman Squares.ttf"
-dest_files=["res://.godot/imported/Diman Squares.ttf-4422bb9a01f9fa4305d11eccb125f366.fontdata"]
+source_file="res://UI/Diman Squares.ttf"
+dest_files=["res://.godot/imported/Diman Squares.ttf-222df3db3098cb62c91f1a65124f7dd0.fontdata"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlgvj2jnntdw4"
-path="res://.godot/imported/paddle.png-0e798fb0912613386507c9904d5cc01a.ctex"
+uid="uid://cmpw262pvqgtf"
+path="res://.godot/imported/wall_atlas.png-b56f790795c9602a06ff633716488d26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://paddle.png"
-dest_files=["res://.godot/imported/paddle.png-0e798fb0912613386507c9904d5cc01a.ctex"]
+source_file="res://Level/wall_atlas.png"
+dest_files=["res://.godot/imported/wall_atlas.png-b56f790795c9602a06ff633716488d26.ctex"]
 
 [params]
 

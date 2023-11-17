@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://p7d1o7ih2stq"]
 
-[ext_resource type="Script" path="res://Boundary.gd" id="1_kxuli"]
+[ext_resource type="Script" path="res://Level/Boundary.gd" id="1_42a78"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocw1f"]
-size = Vector2(256, 29)
+size = Vector2(272, 29)
 
 [node name="Boundary" type="Area2D"]
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("1_kxuli")
+script = ExtResource("1_42a78")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(144, 177.5)

@@ -11,14 +11,13 @@ config_version=5
 [application]
 
 config/name="Breakout"
-run/main_scene="res://Game.tscn"
+run/main_scene="res://Game/Game.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://icon.svg"
 
 [autoload]
 
-Collision="*res://Collision.gd"
-SignalBus="*res://SignalBus.gd"
+Collision="*res://Autoload/Collision.gd"
+SignalBus="*res://Autoload/SignalBus.gd"
 
 [display]
 

@@ -50,11 +50,8 @@ func _update_labels():
 
 func _save_high_score():
 	var high_score_file = FileAccess.open("user://high_score.txt", FileAccess.WRITE)
-	print("save")
 	high_score_file.store_string(str(high_score))
 
 func _load_high_score():
 	var high_score_file = FileAccess.open("user://high_score.txt", FileAccess.READ)
-	print("load")
-	print(high_score_file.get_as_text())
 	high_score = int(high_score_file.get_as_text())

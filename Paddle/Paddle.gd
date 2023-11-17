@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed : float = 125.0
+var speed : float = 150.0
 var start_position : Vector2
 
 func _ready():

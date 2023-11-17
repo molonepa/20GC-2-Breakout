@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bus12tdpnvmkd"
-path="res://.godot/imported/breakable_tile.png-889194c8297b18c492ba307e8e96c80f.ctex"
+uid="uid://cxu401v6vn4yh"
+path="res://.godot/imported/brick.png-884b15f5f210b48166d1f6c7bf8e61d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://breakable_tile.png"
-dest_files=["res://.godot/imported/breakable_tile.png-889194c8297b18c492ba307e8e96c80f.ctex"]
+source_file="res://Brick/brick.png"
+dest_files=["res://.godot/imported/brick.png-884b15f5f210b48166d1f6c7bf8e61d7.ctex"]
 
 [params]
 
