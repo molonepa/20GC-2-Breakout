@@ -3,18 +3,15 @@ extends Node2D
 var is_paused : bool = true
 var start_speed : int = 100
 var current_speed : int = 0
-var radius : int= 4
+var radius : int = 4
 var direction : Vector2
 var rng : RandomNumberGenerator = RandomNumberGenerator.new()
-var start_position : Vector2
+var start_position : Vector2 = Vector2(268, 100)
 
 @onready var ray_cast = $RayCast2D
 
 func _ready():
-	start_position = global_position
-
-	direction = Vector2(rng.randf_range(-.15, .15), rng.randf()).normalized()
-	ray_cast.target_position = direction * radius
+	_initialise()
 
 	ray_cast.set_collision_mask(Collision.wall_collision_layer | Collision.paddle_collision_layer | Collision.breakable_collision_layer | Collision.boundary_collision_layer)
 
@@ -39,13 +36,16 @@ func _physics_process(delta):
 		if collider.collision_layer == Collision.boundary_collision_layer:
 			SignalBus.ball_missed.emit()
 
+func _initialise():
+	global_position = start_position
+	is_paused = true
+	current_speed = 0
+	direction = Vector2(-1, 1).normalized()
+	ray_cast.target_position = direction * radius
+
 func _increase_speed():
 	current_speed *= 1.01
 	start_speed = current_speed
 
 func _reset():
-	global_position = start_position
-	is_paused = true
-	current_speed = 0
-	direction = Vector2(rng.randf_range(-.15, .15), rng.randf()).normalized()
-	ray_cast.target_position = direction * radius
+	_initialise()
